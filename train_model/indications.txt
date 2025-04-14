@@ -1,0 +1,27 @@
+Datasets:
+  - (Pequeño) https://www.kaggle.com/datasets/riyaelizashaju/skin-disease-classification-image-dataset
+  - (Medio) https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000
+  - (Grande) https://www.kaggle.com/datasets/ismailpromus/skin-diseases-image-dataset
+
+Cuando descargue uno de los tres datasets propuestos, se debe actualizar en "train_model/constants.py" el valor de las constantes TRAINING_DATA_PATH_DATASET y TEST_DATA_PATH_DATASET en base a la capeta obtenida de la descarga.
+ - TRAINING_DATA_PATH_DATASET: Constante para la ruta de los datos de entrenamiento
+ - TEST_DATA_PATH_DATASET: Constante para la ruta de los datos de prueba
+
+Pasos para poder entrenar el modelo:
+  - Ingresar a la URL
+  - Descargar el dataset
+  - Agregar la carpeta descargada en la raíz de la carpeta "train_model"
+  - Actualizar las constantes respectivas en "constants.py"
+  - Ejecutar "create_model.py"
+
+Pasos para realizar una predicción:
+  - Agregar una imagen (en formato .jpg, .jpeg o .png) en la raíz de la carpeta "train_model
+  - Actualizar el valor de la constante TEST_IMAGE_NAME en "train_model/constants.py" con el nombre de la imagen agregada
+  - Ejecutar "predict_example.py"
+
+
+Para el MVP del proyecto se está utilizando el Dataset "Pequeño"
+
+IMPORTANTE:
+  - La ruta de la carpeta que representa el dataset descargado debe ser actualizada en el ".gitignore"
+  - No cambiar el nombre del modelo generado, por defecto es "trained_model.h5"
