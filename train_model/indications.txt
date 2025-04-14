@@ -25,3 +25,9 @@ Para el MVP del proyecto se está utilizando el Dataset "Pequeño"
 IMPORTANTE:
   - La ruta de la carpeta que representa el dataset descargado debe ser actualizada en el ".gitignore"
   - No cambiar el nombre del modelo generado, por defecto es "trained_model.h5"
+
+DATO:
+  - Si se decide subir a GitHub un archivo grande, p.e. un modelo ".h5", se debe instalar Git LFS en la máquina del usuario
+  - Para instalar Git LFS -> git lfs install
+  - Luego se debe realizar el seguimiento a los archivos ".h5" -> git lfs track "*.h5"
+  - Subir los cambios a la rama respectiva en GitHub -> git add | git commit | git push
