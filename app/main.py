@@ -9,10 +9,10 @@ import json
 # Inicializar FastAPI
 app = FastAPI()
 
-# Permitir solicitudes desde cualquier origen (o reemplaza con frontend URL)
+# Manejo de CORS
 app.add_middleware(
   CORSMiddleware,
-  allow_origins=["*"],  # Puedes restringir esto a tu frontend
+  allow_origins=["*"],
   allow_credentials=True,
   allow_methods=["*"],
   allow_headers=["*"],
