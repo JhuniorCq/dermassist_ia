@@ -5,6 +5,7 @@ from PIL import Image
 import numpy as np
 import io
 import json
+from datetime import datetime, timezone
 
 # Inicializar FastAPI
 app = FastAPI()
@@ -36,9 +37,11 @@ async def predict(file: UploadFile = File(...)):
   class_index = int(np.argmax(prediction))
   confidence = float(np.max(prediction))
   class_name = classes[class_index]
+  timestamp = datetime.now(timezone.utc).isoformat()
   
   return {
     "class_index": class_index,
     "class_name": class_name,
-    "confidence": confidence
+    "confidence": confidence,
+    "timestamp": timestamp
   }
