@@ -20,11 +20,11 @@ app.add_middleware(
 )
 
 # Cargar el modelo y clases
-model = load_model("model/trained_model.h5")
+model = load_model("model/trained_model.keras")
 
 with open("model/class_indexes.json", "r") as f:
   class_indices = json.load(f)
-  classes = {v: k for k, v in class_indices.items()}
+  classes = {int(k): v for k, v in class_indices.items()}
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
