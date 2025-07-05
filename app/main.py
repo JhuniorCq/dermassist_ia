@@ -20,9 +20,9 @@ app.add_middleware(
 )
 
 # Cargar el modelo y clases
-model = load_model("model/trained_model.keras")
+model = load_model("inference_model/trained_model.keras")
 
-with open("model/class_indexes.json", "r") as f:
+with open("inference_model/class_indexes.json", "r") as f:
   class_indices = json.load(f)
   classes = {int(k): v for k, v in class_indices.items()}
 
