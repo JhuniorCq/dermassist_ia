@@ -1,8 +1,2 @@
 env/
-
-train_model/class_indexes.json
-train_model/trained_model.h5
-
-# Ruta de la carpeta que presenta el dataset
-train_model/Split_smol/
-
+env310/
